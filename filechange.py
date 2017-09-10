@@ -27,19 +27,23 @@ def con():
     else:
       output[boss].update({row[1]: {"Jan-17": row[2], "Feb-17": row[3], "Mar-17": row[4]}})
 
+  print(output)
   # Serialize the list of dicts to JSON
   j = json.dumps(output)
+
 
   # Write to file
   with open('data.json', 'w') as f:
     f.write(j)
 
 
-if __name__ == "__main__":
-
-    i = os.path.getmtime('./puthere/myfile.xlsx')
-    while (True):
-      if i != os.path.getmtime('./puthere/myfile.xlsx'):
-        con()
-        i = os.path.getmtime('./puthere/myfile.xlsx')
-      time.sleep(1)
+con()
+#
+# if __name__ == "__main__":
+#     con()
+#     i = os.path.getmtime('./puthere/myfile.xlsx')
+#     while (True):
+#       if i != os.path.getmtime('./puthere/myfile.xlsx'):
+#         con()
+#         i = os.path.getmtime('./puthere/myfile.xlsx')
+#       time.sleep(1)
