@@ -1,7 +1,7 @@
 import time
 import os
 import xlrd
-import simplejson as json
+import json
 
 def con():
   # Open the workbook and select the first worksheet

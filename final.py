@@ -23,8 +23,8 @@ def con():
     # Open the workbook and select the first worksheet
     wb = xlrd.open_workbook('./puthere/myfile.xlsx')
     sh = wb.sheet_by_index(0)
-
-
+    
+    
 
     # List to hold dictionaries
     output = {}
