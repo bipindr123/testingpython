@@ -53,7 +53,7 @@ def smoothing(t, y, alpha, beta):
         h = t[i] - t[i-1]
         pred_y, pred_T = holt_alg(h, y[i-1], pred_y, pred_T, alpha, beta)
         y_hat.append(pred_y)
-    return y_hat 
+    return y_hat
 
 plt.plot(dates,prices, 'x-')
 plt.hold(True)
