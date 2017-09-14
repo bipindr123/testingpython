@@ -47,10 +47,12 @@ for i in data:
     # print(dates)
     # print(values)
     dates3 = []
-
+    
+  
     try:
       next_val = predict_price(dates, values, dates2)
     except:
+      next_val = ["",""]
       pass
     dates3 = []
     for e in range(0, len(dates2)):
@@ -66,6 +68,7 @@ for i in data:
       flag = 1
 
 j = json.dumps(output)
+print(output)
 
 # Write to file
 with open('data2.json', 'w') as f:
